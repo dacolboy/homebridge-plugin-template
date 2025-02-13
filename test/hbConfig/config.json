@@ -7,7 +7,7 @@
   },
   "description": "HomeBridge HTTP Status Control",
   "plugins": [
-    "homebridge-plugin-name",
+    "homebridge-plugin-bueno",
     "homebridge-config-ui-x"
   ],
   "platforms": [
@@ -23,8 +23,18 @@
       "debug": false
     },
     {
-      "name": "homebridge-plugin-name",
-      "platform": "ExampleHomebridgePlugin"
+      "name": "homebridge-plugin-bueno",
+      "platform": "PluginBueno",
+      "accessories": [
+        {
+          "displayName": "Yamaha",
+          "tipo": "yamaha",
+          "ip": "192.168.1.99",
+          "uuid": "11:22:33:44:55:66",
+          "volumePercentageLow": 30,
+          "volumePercentageHigh": 80
+        }
+      ]
     }
   ],
   "accessories": []
